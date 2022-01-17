@@ -31,7 +31,7 @@ class Timer(object):
         url = 'https://api.m.jd.com/client.action?functionId=queryMaterialProducts&client=wh5'
         ret = requests.get(url).text
         js = json.loads(ret)
-        return int(js["serverTime2"])
+        return int(js["currentTime2"])
 
     def local_time(self):
         """
